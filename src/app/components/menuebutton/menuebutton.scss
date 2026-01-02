@@ -1,0 +1,20 @@
+.menuebutton {
+    width: 110px;
+    height: 110px;
+    background-color: rgb(78, 78, 83);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}   
+
+.button-image {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+}
+
+.button-text {
+    text-align: center;
+}

@@ -1,0 +1,18 @@
+
+.overview {
+    display: flex;
+    height: 97vh;
+}
+
+app-menuebar {
+    width: 5%;
+    height: 100%;
+    display: block; /* wichtig, damit width/height funktionieren */
+}
+
+app-contentview {
+    margin-left: 8px;
+    width: 95%;
+    height: 100%;
+    display: block;
+}
