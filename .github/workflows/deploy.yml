@@ -34,5 +34,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/star-board/browser
+          publish_dir: ./dist/StarBoard/browser
           publish_branch: gh-pages
