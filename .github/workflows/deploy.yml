@@ -34,7 +34,11 @@ jobs:
       - name: Copy build output to docs
         run: |
           rm -rf docs
-          cp -r dist/StarBoard docs
+          if [ -d "dist/StarBoard/browser" ]; then
+            cp -r dist/StarBoard/browser docs
+          else
+            cp -r dist/StarBoard docs
+          fi
           cp docs/index.html docs/404.html
 
       - name: Deploy to GitHub Pages
