@@ -31,12 +31,10 @@ jobs:
         run: |
           npm run build -- --configuration production --base-href /StarBoard/
 
-      - name: Fix GitHub Pages structure
+      - name: Copy build output to docs
         run: |
-          if [ -d "docs/browser" ]; then
-            mv docs/browser/* docs/
-            rmdir docs/browser
-          fi
+          rm -rf docs
+          cp -r dist/StarBoard docs
           cp docs/index.html docs/404.html
 
       - name: Deploy to GitHub Pages
