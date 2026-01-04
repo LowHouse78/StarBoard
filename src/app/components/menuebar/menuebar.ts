@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Menuebutton } from '../menuebutton/menuebutton';
 
 @Component({
@@ -7,6 +8,24 @@ import { Menuebutton } from '../menuebutton/menuebutton';
   templateUrl: './menuebar.html',
   styleUrl: './menuebar.scss',
 })
-export class Menuebar {
 
+export class Menuebar {
+  constructor(private router: Router) {}
+
+  navigateToLiveData() {
+    this.router.navigate(['/live-data']);
+  }
+
+  navigateToHistoricalData() {
+    this.router.navigate(['/historical-data']);
+  }
+
+  navigateToSettings() {
+    this.router.navigate(['/settings']);
+  }
+
+  exitApp() {
+    // Exit-Logik hier
+    console.log('Exit clicked');
+  }
 }

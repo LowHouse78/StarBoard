@@ -1,3 +1,6 @@
 <div class="menuebar">
-    <app-menuebutton text="Exit" [img]="'assets/images/settings.svg'"></app-menuebutton>
+    <app-menuebutton text="Live data" [img]="'assets/images/rocket-lunch.svg'" (clicked)="navigateToLiveData()"></app-menuebutton>
+    <app-menuebutton text="Historical data" [img]="'assets/images/calendar-clock.svg'" (clicked)="navigateToHistoricalData()"></app-menuebutton>
+    <app-menuebutton text="Settings" [img]="'assets/images/settings.svg'" (clicked)="navigateToSettings()"></app-menuebutton>
+    <app-menuebutton text="Exit" [img]="'assets/images/sign-out-alt.svg'" (clicked)="exitApp()"></app-menuebutton>
 </div>
