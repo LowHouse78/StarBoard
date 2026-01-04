@@ -1,0 +1,16 @@
+.settings-container {
+    align-items: flex-start;
+    padding: 16px;
+    background-color: transparent;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: flex;
+    width: 100%;
+    
+
+    .group-box {
+        align-self: flex-start;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
+}

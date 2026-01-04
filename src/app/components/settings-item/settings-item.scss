@@ -1,0 +1,94 @@
+.settings-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hfr-label {
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.content-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+// Wiederverwendbare UI-Komponenten
+.group-box-settings {
+    width: 190px;
+    border: 1px solid rgb(78, 78, 83);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: auto;
+    background-color: rgba(78, 78, 83, 0.1);
+}
+
+.group-box-title {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.checkbox-container {
+    padding-top: 2px;
+}
+
+.settings-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.limits-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.limit-row {
+    display: flex;
+    align-items: center;
+}
+
+.limit-label {
+    min-width: 100px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.limit-input {
+    padding: 6px 10px;
+    border: 1px solid rgb(78, 78, 83);
+    border-radius: 4px;
+    background-color: rgba(78, 78, 83, 0.2);
+    color: #fff;
+    font-size: 14px;
+    width: 70px;
+
+    &:focus {
+        outline: none;
+        border-color: rgb(90, 90, 95);
+        background-color: rgba(78, 78, 83, 0.3);
+    }
+}

@@ -4,3 +4,30 @@ color: rgba(255, 255, 255, 0.898);
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
+
+// Wiederverwendbare UI-Komponenten
+.group-box {
+  width: 820px;
+  border: 1px solid rgb(78, 78, 83);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  margin-left: 0;
+  margin-right: auto;
+  background-color: rgba(78, 78, 83, 0.1);
+
+  .group-box-title {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .group-box-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}

@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Menuebutton } from '../menuebutton/menuebutton';
+import { MenuebuttonComponent } from '../menuebutton/menuebutton';
 
 @Component({
   selector: 'app-menuebar',
-  imports: [Menuebutton],
+  imports: [MenuebuttonComponent],
   templateUrl: './menuebar.html',
   styleUrl: './menuebar.scss',
 })
 
-export class Menuebar {
+export class MenuebarComponent {
   constructor(private router: Router) {}
 
   navigateToLiveData() {

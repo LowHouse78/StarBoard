@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './live-data.html',
   styleUrl: './live-data.scss',
 })
-export class LiveData {
+export class LiveDataComponent {
 
 }

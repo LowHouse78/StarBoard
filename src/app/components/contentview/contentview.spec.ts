@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Contentview } from './contentview';
+import { ContentviewComponent } from './contentview';
 
-describe('Contentview', () => {
-  let component: Contentview;
-  let fixture: ComponentFixture<Contentview>;
+describe('ContentviewComponent', () => {
+  let component: ContentviewComponent;
+  let fixture: ComponentFixture<ContentviewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Contentview]
+      imports: [ContentviewComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Contentview);
+    fixture = TestBed.createComponent(ContentviewComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

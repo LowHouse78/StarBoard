@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { Overview } from './components/overview/overview';
+import { OverviewComponent } from './components/overview/overview';
 
 @Component({
   selector: 'app-root',
-  imports: [Overview],
+  imports: [OverviewComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

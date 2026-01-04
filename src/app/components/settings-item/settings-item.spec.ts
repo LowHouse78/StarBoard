@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MenuebarComponent } from './menuebar';
+import { SettingsItem } from './settings-item';
 
-describe('MenuebarComponent', () => {
-  let component: MenuebarComponent;
-  let fixture: ComponentFixture<MenuebarComponent>;
+describe('SettingsItem', () => {
+  let component: SettingsItem;
+  let fixture: ComponentFixture<SettingsItem>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MenuebarComponent]
+      imports: [SettingsItem]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MenuebarComponent);
+    fixture = TestBed.createComponent(SettingsItem);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

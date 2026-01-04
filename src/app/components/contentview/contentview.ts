@@ -7,6 +7,6 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './contentview.html',
   styleUrl: './contentview.scss',
 })
-export class Contentview {
+export class ContentviewComponent {
 
 }

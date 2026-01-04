@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LiveData } from './live-data';
+import { LiveDataComponent } from './live-data';
 
-describe('LiveData', () => {
-  let component: LiveData;
-  let fixture: ComponentFixture<LiveData>;
+describe('LiveDataComponent', () => {
+  let component: LiveDataComponent;
+  let fixture: ComponentFixture<LiveDataComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LiveData]
+      imports: [LiveDataComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LiveData);
+    fixture = TestBed.createComponent(LiveDataComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

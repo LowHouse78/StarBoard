@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './historical-data.html',
   styleUrl: './historical-data.scss',
 })
-export class HistoricalData {
+export class HistoricalDataComponent {
 
 }

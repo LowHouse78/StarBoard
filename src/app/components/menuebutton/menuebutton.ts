@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './menuebutton.html',
   styleUrl: './menuebutton.scss',
 })
-export class Menuebutton {
+export class MenuebuttonComponent {
   @Input() img: string = '';
   @Input() text: string = '';
   @Output() clicked = new EventEmitter<void>();
