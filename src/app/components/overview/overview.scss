@@ -1,18 +1,19 @@
 
 .overview {
     display: flex;
+    flex-direction: row;
     height: 97vh;
+    gap: 8px;
 }
 
 app-menuebar {
-    width: 5%;
+    flex-shrink: 0;
     height: 100%;
     display: block; /* wichtig, damit width/height funktionieren */
 }
 
 app-contentview {
-    margin-left: 8px;
-    width: 95%;
+    flex: 1;
     height: 100%;
     display: block;
 }

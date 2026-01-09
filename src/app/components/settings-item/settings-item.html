@@ -1,20 +1,27 @@
-<div class="group-box-settings">
+@for (parameter of parameters(); track parameter.id) {
+  <div class="group-box-settings">
     <div class="settings-item">
-        <div class="header-row">
-            <mat-checkbox class="settings-checkbox"></mat-checkbox>
-            <p class="hfr-label">HFR</p>
-        </div>
-        
+      <div class="header-row">
+        <mat-checkbox 
+          class="settings-checkbox"
+          [checked]="parameter.enabled">
+        </mat-checkbox>
+        <p class="parameter-label">{{ parameter.parameterLabel }}</p>
+      </div>
+      
+      @if (getLimitsForParameter(parameter.id); as limits) {
         <div class="limits-container">
-            <mat-form-field appearance="outline" class="limit-field">
-                <mat-label>Upper Limit</mat-label>
-                <input matInput type="number" />
-            </mat-form-field>
+          <mat-form-field appearance="outline" class="limit-field">
+            <mat-label>{{ limits.upperLimitLabel }}</mat-label>
+            <input matInput type="number" [value]="limits.upperLimit" readonly />
+          </mat-form-field>
 
-            <mat-form-field appearance="outline" class="limit-field">
-                <mat-label>Lower Limit</mat-label>
-                <input matInput type="number" />
-            </mat-form-field>
+          <mat-form-field appearance="outline" class="limit-field">
+            <mat-label>{{ limits.lowerLimitLabel }}</mat-label>
+            <input matInput type="number" [value]="limits.lowerLimit" readonly />
+          </mat-form-field>
         </div>
+      }
     </div>
-</div>
+  </div>
+}

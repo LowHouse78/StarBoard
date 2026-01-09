@@ -1,0 +1,23 @@
+[
+  {
+    "parameterId": "1",
+    "upperLimit": 100,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Upper Limit",
+    "lowerLimitLabel": "Lower Limit"
+  },
+  {
+    "parameterId": "2",
+    "upperLimit": 50,
+    "lowerLimit": -20,
+    "upperLimitLabel": "Max Temperature",
+    "lowerLimitLabel": "Min Temperature"
+  },
+  {
+    "parameterId": "3",
+    "upperLimit": 10000,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Max Position",
+    "lowerLimitLabel": "Min Position"
+  }
+]

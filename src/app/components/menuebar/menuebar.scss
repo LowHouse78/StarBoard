@@ -1,7 +1,6 @@
 .menuebar {
     width: fit-content;
-    min-width: 156px; // Button width (110px) + padding (8px * 2)
-    min-height: 100%;
+    height: 100%;
     background-color: var(--mat-sys-surface-container-low);
     display: flex;
     justify-content: center;

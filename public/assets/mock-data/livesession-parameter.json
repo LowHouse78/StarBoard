@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "parameterLabel": "HFR",
+    "enabled": true
+  },
+  {
+    "id": "2",
+    "parameterLabel": "Temperature",
+    "enabled": false
+  },
+  {
+    "id": "3",
+    "parameterLabel": "Focus Position",
+    "enabled": true
+  }
+]
