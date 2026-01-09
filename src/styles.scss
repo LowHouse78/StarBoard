@@ -1,3 +1,40 @@
+
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  height: 100%;
+  @include mat.theme((
+    color: (
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+body {
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  color-scheme: dark;
+
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  // Reset the user agent margin.
+  margin: 0;
+  height: 100%;
+}
 body{
 background-color: rgb(17, 17, 19);
 color: rgba(255, 255, 255, 0.898);
@@ -8,19 +45,19 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 // Wiederverwendbare UI-Komponenten
 .group-box {
   width: 820px;
-  border: 1px solid rgb(78, 78, 83);
+  border: 1px solid var(--mat-sys-outline);
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 20px;
   margin-left: 0;
   margin-right: auto;
-  background-color: rgba(78, 78, 83, 0.1);
+  background-color: var(--mat-sys-surface-container-low);
+  box-shadow: var(--mat-sys-level1);
 
   .group-box-title {
     margin: 0 0 20px 0;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
+    font: var(--mat-sys-headline-small);
+    color: var(--mat-sys-on-surface);
   }
 
   .group-box-content {
@@ -30,4 +67,15 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     gap: 16px;
     align-items: flex-start;
   }
+}
+
+// Material Typography Helper Classes
+.mat-headline-small {
+  font: var(--mat-sys-headline-small) !important;
+  color: var(--mat-sys-on-surface) !important;
+}
+
+.mat-body-medium {
+  font: var(--mat-sys-body-medium) !important;
+  color: var(--mat-sys-on-surface-variant) !important;
 }

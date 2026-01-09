@@ -1,94 +1,78 @@
 .settings-item {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 2px;
 }
 
 .header-row {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
+    margin-left: -11px;
 }
 
 .hfr-label {
-    margin: 0;
-    color: #fff;
+    color: var(--mat-sys-on-surface);
     font-size: 14px;
     font-weight: 500;
-}
-
-.content-row {
+    line-height: 1;
     display: flex;
-    align-items: flex-start;
-    gap: 16px;
-}
-
-.left-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+    align-items: center;
 }
 
 // Wiederverwendbare UI-Komponenten
 .group-box-settings {
+    height: 170px;
     width: 190px;
-    border: 1px solid rgb(78, 78, 83);
+    border: 1px solid var(--mat-sys-outline);
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 20px;
     margin-left: 0;
     margin-right: auto;
-    background-color: rgba(78, 78, 83, 0.1);
-}
-
-.group-box-title {
-    margin: 0 0 12px 0;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-}
-
-.checkbox-container {
-    padding-top: 2px;
+    background-color: var(--mat-sys-surface-container-low);
 }
 
 .settings-checkbox {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
+    // Material Checkbox übernimmt das Styling
+    ::ng-deep .mdc-checkbox {
+        padding: 0;
+        margin: 0;
+    }
+    
+    ::ng-deep .mdc-checkbox__background {
+        top: 0;
+    }
+    
+    // Checkbox vertikal ausrichten
+    display: flex;
+    align-items: center;
+    margin-top: -2px;
 }
 
 .limits-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 4px;
     flex: 1;
 }
 
-.limit-row {
-    display: flex;
-    align-items: center;
-}
-
-.limit-label {
-    min-width: 100px;
-    color: #fff;
-    font-size: 14px;
-}
-
-.limit-input {
-    padding: 6px 10px;
-    border: 1px solid rgb(78, 78, 83);
-    border-radius: 4px;
-    background-color: rgba(78, 78, 83, 0.2);
-    color: #fff;
-    font-size: 14px;
-    width: 70px;
-
-    &:focus {
-        outline: none;
-        border-color: rgb(90, 90, 95);
-        background-color: rgba(78, 78, 83, 0.3);
+.limit-field {
+    width: 100%;
+    
+    // Material Form Field Anpassungen für kompakte Darstellung
+    ::ng-deep .mat-mdc-form-field-infix {
+        min-height: 20px;
     }
+    
+    ::ng-deep .mat-mdc-text-field-wrapper {
+        padding-bottom: 0;
+        margin-bottom: -16px;
+    }
+
+    .mat-form-field{
+        height: 20px;
+    }
+
+    
 }

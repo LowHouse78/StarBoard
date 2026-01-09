@@ -1,8 +1,9 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-menuebutton',
-  imports: [],
+  imports: [MatButtonModule],
   templateUrl: './menuebutton.html',
   styleUrl: './menuebutton.scss',
 })
