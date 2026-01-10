@@ -1,7 +1,11 @@
 .settings-item {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 16px;
+}
+
+:host {
+    display: contents;
 }
 
 .header-row {
@@ -22,15 +26,18 @@
 
 // Wiederverwendbare UI-Komponenten
 .group-box-settings {
-    height: 170px;
+    height: 150px;
     width: 190px;
+    min-width: 190px;
+    max-width: 190px;
     border: 1px solid var(--mat-sys-outline);
     border-radius: 8px;
     padding: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     margin-left: 0;
-    margin-right: auto;
+    margin-right: 0;
     background-color: var(--mat-sys-surface-container-low);
+    flex-shrink: 0;
 }
 
 .settings-checkbox {
@@ -53,7 +60,7 @@
 .limits-container {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 12px;
     flex: 1;
 }
 
@@ -62,17 +69,16 @@
     
     // Material Form Field Anpassungen für kompakte Darstellung
     ::ng-deep .mat-mdc-form-field-infix {
-        min-height: 20px;
+        min-height: 40px;
+        padding-top: 8px;
+        padding-bottom: 8px;
     }
     
     ::ng-deep .mat-mdc-text-field-wrapper {
         padding-bottom: 0;
-        margin-bottom: -16px;
     }
 
-    .mat-form-field{
-        height: 20px;
+    ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+        display: none;
     }
-
-    
 }

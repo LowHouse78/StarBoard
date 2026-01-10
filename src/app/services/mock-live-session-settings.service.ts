@@ -14,7 +14,7 @@ export class MockLiveSessionSettingsService implements ILiveSessionSettingsServi
 
   getSettingsParameters(): Observable<LiveSessionSettingsParameter[]> {
     return this.http.get<LiveSessionSettingsParameter[]>(
-      '/assets/mock-data/livesession-settings-parameters.json'
+      '/assets/mock-data/livesession-parameter.json'
     );
   }
 
