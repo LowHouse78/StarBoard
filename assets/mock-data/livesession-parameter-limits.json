@@ -1,0 +1,114 @@
+[
+  {
+    "parameterId": "1",
+    "upperLimit": 100,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Target Time",
+    "lowerLimitLabel": "Target Time"
+  },
+  {
+    "parameterId": "2",
+    "upperLimit": 0.7,
+    "lowerLimit": 0.1,
+    "upperLimitLabel": "Max Arc Sec.",
+    "lowerLimitLabel": "Min Arc Sec."
+  },
+  {
+    "parameterId": "3",
+    "upperLimit": 0.7,
+    "lowerLimit": 0.1,
+    "upperLimitLabel": "Max Arc Sec.",
+    "lowerLimitLabel": "Min Arc Sec."
+  },
+  {
+    "parameterId": "4",
+    "upperLimit": 0.7,
+    "lowerLimit": 0.1,
+    "upperLimitLabel": "Max Arc Sec.",
+    "lowerLimitLabel": "Min Arc Sec."
+  },
+  {
+    "parameterId": "5",
+    "upperLimit": 1.7,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Upper Limit",
+    "lowerLimitLabel": "Lower Limit"
+  },
+  {
+    "parameterId": "6",
+    "upperLimit": 1.7,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Upper Limit",
+    "lowerLimitLabel": "Lower Limit"
+  },
+  {
+    "parameterId": "7",
+    "upperLimit": 1.7,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Upper Limit",
+    "lowerLimitLabel": "Lower Limit"
+  },
+  {
+    "parameterId": "8",
+    "upperLimit": 1.7,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Upper Limit",
+    "lowerLimitLabel": "Lower Limit"
+  },
+  {
+    "parameterId": "9",
+    "upperLimit": 1.7,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Upper Limit",
+    "lowerLimitLabel": "Lower Limit"
+  },
+  {
+    "parameterId": "10",
+    "upperLimit": 1.7,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Upper Limit",
+    "lowerLimitLabel": "Lower Limit"
+  },
+  {
+    "parameterId": "11",
+    "upperLimit": 50,
+    "lowerLimit": -20,
+    "upperLimitLabel": "Max Temperature",
+    "lowerLimitLabel": "Min Temperature"
+  },
+  {
+    "parameterId": "12",
+    "upperLimit": 0,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Upper Limit",
+    "lowerLimitLabel": "Lower Limit"
+  },
+  {
+    "parameterId": "13",
+    "upperLimit": 100,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Upper Limit",
+    "lowerLimitLabel": "Lower Limit"
+  },
+  {
+    "parameterId": "14",
+    "upperLimit": 100,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Upper Limit",
+    "lowerLimitLabel": "Lower Limit"
+  },
+  {
+    "parameterId": "15",
+    "upperLimit": 100,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Upper Limit",
+    "lowerLimitLabel": "Lower Limit"
+  },
+  {
+    "parameterId": "16",
+    "upperLimit": 100,
+    "lowerLimit": 0,
+    "upperLimitLabel": "Upper Limit",
+    "lowerLimitLabel": "Lower Limit"
+  }
+]
