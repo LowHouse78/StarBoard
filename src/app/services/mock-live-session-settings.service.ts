@@ -14,13 +14,13 @@ export class MockLiveSessionSettingsService implements ILiveSessionSettingsServi
 
   getSettingsParameters(): Observable<LiveSessionSettingsParameter[]> {
     return this.http.get<LiveSessionSettingsParameter[]>(
-      '/assets/mock-data/livesession-parameter.json'
+      'assets/mock-data/livesession-parameter.json'
     );
   }
 
   getSettingsLimits(): Observable<LiveSessionSettingsLimit[]> {
     return this.http.get<LiveSessionSettingsLimit[]>(
-      '/assets/mock-data/livesession-parameter-limits.json'
+      'assets/mock-data/livesession-parameter-limits.json'
     );
   }
 }
