@@ -28,11 +28,17 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --configuration production --base-href /StarBoard/
+        run: npm run build -- --configuration production
+
+      - name: Flatten build output and create .nojekyll
+        run: |
+          cp -r docs/browser/* docs/
+          rm -rf docs/browser
+          touch docs/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/StarBoard/browser
+          publish_dir: ./docs
           publish_branch: gh-pages
