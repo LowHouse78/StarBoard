@@ -1,0 +1,87 @@
+[
+  {
+    "id": "1",
+    "parameterLabel": "Timestamp",
+    "enabled": true
+  },
+  {
+    "id": "2",
+    "parameterLabel": "RMS Total",
+    "enabled": true
+  },
+  {
+    "id": "3",
+    "parameterLabel": "RMS Dec",
+    "enabled": true
+  },
+  {
+    "id": "4",
+    "parameterLabel": "RMS RA",
+    "enabled": true
+  },
+  {
+    "id": "5",
+    "parameterLabel": "HFR",
+    "enabled": true
+  },
+  {
+    "id": "6",
+    "parameterLabel": "Mean",
+    "enabled": true
+  },
+  {
+    "id": "7",
+    "parameterLabel": "Median",
+    "enabled": true
+  },
+  {
+    "id": "8",
+    "parameterLabel": "Min",
+    "enabled": true
+  },
+  {
+    "id": "9",
+    "parameterLabel": "Max",
+    "enabled": true
+  },
+  {
+    "id": "10",
+    "parameterLabel": "Stars",
+    "enabled": true
+  },
+  {
+    "id": "11",
+    "parameterLabel": "Temperature",
+    "enabled": true
+  },
+  
+  {
+    "id": "12",
+    "parameterLabel": "Focuser Position",
+    "enabled": true
+  },
+  
+  {
+    "id": "13",
+    "parameterLabel": "Duration",
+    "enabled": true
+  },
+  
+  {
+    "id": "14",
+    "parameterLabel": "Std Deviation",
+    "enabled": true
+  },
+  
+  {
+    "id": "15",
+    "parameterLabel": "Rotator Pos.",
+    "enabled": true
+  },
+  
+  {
+    "id": "16",
+    "parameterLabel": "MAD",
+    "enabled": true
+  }
+]
