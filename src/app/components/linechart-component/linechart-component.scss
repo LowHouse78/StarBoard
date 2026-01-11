@@ -1,0 +1,60 @@
+.chart-container {
+  padding: 20px;
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  // Weißer Rahmen als Achsenlinien
+  ::ng-deep ngx-charts-line-chart .chart {
+    border-left: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+  }
+}
+
+::ng-deep .line-chart .refline-path:nth-child(1) {
+  stroke: #FF0000 !important; // Erste Linie: Rot
+  stroke-width: 2;
+}
+
+::ng-deep .line-chart .refline-path:nth-child(2) {
+  stroke: #FFFF00 !important; // Zweite Linie: Gelb
+  stroke-width: 2;
+}
+
+::ng-deep .line-chart .refline-label:nth-child(1) {
+  fill: #FF0000 !important; // Upper Limit Label: Rot
+}
+
+::ng-deep .line-chart .refline-label:nth-child(2) {
+  fill: #FFFF00 !important; // Lower Limit Label: Gelb
+}
+
+// Entferne alle Gitterlinien
+::ng-deep ngx-charts-line-chart .gridline-path {
+  display: none !important;
+}
+
+// Achsenlinien sichtbar machen (alle möglichen Selektoren)
+::ng-deep ngx-charts-line-chart .x-axis .domain,
+::ng-deep ngx-charts-line-chart .y-axis .domain {
+  stroke: #FFFFFF !important;
+  stroke-width: 2 !important;
+  opacity: 1 !important;
+}
+
+::ng-deep ngx-charts-line-chart .axis-line {
+  stroke: #FFFFFF !important;
+  stroke-width: 2 !important;
+}
+
+// Tick-Linien an den Achsen
+::ng-deep ngx-charts-line-chart .x-axis line,
+::ng-deep ngx-charts-line-chart .y-axis line {
+  stroke: #FFFFFF !important;
+}
+
+// Text-Labels weiß
+::ng-deep ngx-charts-line-chart .tick text {
+  fill: #FFFFFF !important;
+}

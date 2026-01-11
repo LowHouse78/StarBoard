@@ -8,13 +8,13 @@ import { LiveSessionSettingsParameter } from '../../models/livesession-settings-
 import { LiveSessionSettingsLimit } from '../../models/livesession-settings-limit.model';
 
 @Component({
-  selector: 'app-settings-item',
+  selector: 'app-settings-item-component',
   standalone: true,
   imports: [CommonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule],
-  templateUrl: './settings-item.html',
-  styleUrl: './settings-item.scss'
+  templateUrl: './settings-item-component.html',
+  styleUrl: './settings-item-component.scss'
 })
-export class SettingsItemComponent implements OnInit {
+export class SettingsItemComponentComponent implements OnInit {
   parameters = signal<LiveSessionSettingsParameter[]>([]);
   limits = signal<LiveSessionSettingsLimit[]>([]);
   

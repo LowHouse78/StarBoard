@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MenuebarComponent } from './menuebar';
+import { Oneview } from './oneview';
 
-describe('MenuebarComponent', () => {
-  let component: MenuebarComponent;
-  let fixture: ComponentFixture<MenuebarComponent>;
+describe('Oneview', () => {
+  let component: Oneview;
+  let fixture: ComponentFixture<Oneview>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MenuebarComponent]
+      imports: [Oneview]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MenuebarComponent);
+    fixture = TestBed.createComponent(Oneview);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

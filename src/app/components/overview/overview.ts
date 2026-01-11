@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { MenuebarComponent } from '../menuebar/menuebar';  
+import { MenuebarComponentComponent } from '../menuebar-component/menuebar-component';  
 import { ContentviewComponent } from '../contentview/contentview'; 
 
 @Component({
   selector: 'app-overview',
-  imports: [MenuebarComponent, ContentviewComponent],
+  imports: [MenuebarComponentComponent, ContentviewComponent],
   templateUrl: './overview.html',
   styleUrl: './overview.scss',
 })

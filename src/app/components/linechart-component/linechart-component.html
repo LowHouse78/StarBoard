@@ -1,0 +1,23 @@
+<div class="chart-container">
+  <h2>Line Chart</h2>
+  <ngx-charts-line-chart
+    [view]="view"
+    [legend]="legend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxis]="xAxis"
+    [yAxis]="yAxis"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    [timeline]="timeline"
+    [results]="multi"
+    [animations]="animations"
+    [referenceLines]="referenceLines"
+    [showRefLines]="showRefLines"
+    [showRefLabels]="showRefLabels"
+    [showGridLines]="showGridLines"
+    (select)="onSelect($event)"
+    (activate)="onActivate($event)"
+    (deactivate)="onDeactivate($event)">
+  </ngx-charts-line-chart>
+</div>

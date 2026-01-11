@@ -3,13 +3,13 @@ import { Router } from '@angular/router';
 import { MenuebuttonComponentComponent } from '../menuebutton-component/menuebutton-component';
 
 @Component({
-  selector: 'app-menuebar',
+  selector: 'app-menuebar-component',
   imports: [MenuebuttonComponentComponent],
-  templateUrl: './menuebar.html',
-  styleUrl: './menuebar.scss',
+  templateUrl: './menuebar-component.html',
+  styleUrl: './menuebar-component.scss',
 })
 
-export class MenuebarComponent {
+export class MenuebarComponentComponent {
   constructor(private router: Router) {}
 
   navigateToOneView() {

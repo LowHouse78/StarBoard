@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { LiveDataComponent } from './components/live-data/live-data';
-import { HistoricalDataComponent } from './components/historical-data/historical-data';
-import { SettingsComponent } from './components/settings/settings';
+import { Oneview } from './components/oneview/oneview';
+import { HistoricalDataViewComponent } from './components/historical-data-view/historical-data-view';
+import { SettingsviewComponent } from './components/settingsview/settingsview';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/live-data', pathMatch: 'full' },
-    { path: 'live-data', component: LiveDataComponent },
-    { path: 'historical-data', component: HistoricalDataComponent },
-    { path: 'settings', component: SettingsComponent }
+    { path: '', redirectTo: '/oneview', pathMatch: 'full' },
+    { path: 'oneview', component: Oneview },
+    { path: 'historical-data', component: HistoricalDataViewComponent },
+    { path: 'settings', component: SettingsviewComponent }
 ];

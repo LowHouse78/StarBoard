@@ -2,12 +2,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'app-menuebutton',
+  selector: 'app-menuebutton-component',
   imports: [MatButtonModule],
-  templateUrl: './menuebutton.html',
-  styleUrl: './menuebutton.scss',
+  templateUrl: './menuebutton-component.html',
+  styleUrl: './menuebutton-component.scss',
 })
-export class MenuebuttonComponent {
+export class MenuebuttonComponentComponent {
   @Input() img: string = '';
   @Input() text: string = '';
   @Output() clicked = new EventEmitter<void>();
