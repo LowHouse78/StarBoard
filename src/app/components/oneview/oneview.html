@@ -1,4 +1,24 @@
-<div>
+<div class="oneview-container">
   <h1>One View</h1>
-  <app-linechart-component></app-linechart-component>
+  
+  <div *ngIf="isLoading" class="loading">
+    Lade Charts...
+  </div>
+
+  <div *ngIf="!isLoading && chartConfigs.length === 0" class="no-charts">
+    Keine aktivierten Charts verfügbar
+  </div>
+
+  <div *ngIf="!isLoading && chartConfigs.length > 0" class="charts-grid">
+    <div *ngFor="let config of chartConfigs" class="chart-item">
+      <app-linechart-component 
+        [chartId]="config.id"
+        [title]="config.label"
+        [upperLimit]="config.upperLimit"
+        [lowerLimit]="config.lowerLimit"
+        [upperLimitLabel]="config.upperLimitLabel"
+        [lowerLimitLabel]="config.lowerLimitLabel">
+      </app-linechart-component>
+    </div>
+  </div>
 </div>

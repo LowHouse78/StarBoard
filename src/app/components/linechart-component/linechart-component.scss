@@ -1,8 +1,50 @@
+:host {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  flex: 1;
+  overflow: hidden;
+}
+
 .chart-container {
-  padding: 20px;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background-color: var(--mat-sys-surface-container-highest);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 16px;
+  box-sizing: border-box;
   
   h2 {
-    margin-bottom: 20px;
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    flex-shrink: 0;
+  }
+
+  ngx-charts-line-chart {
+    width: 100% !important;
+    flex: 1;
+    min-height: 0;
+    max-height: 100%;
+    display: flex;
+    overflow: hidden;
+  }
+
+  // SVG und Chart-Elemente begrenzen
+  ::ng-deep ngx-charts-line-chart svg {
+    width: 100% !important;
+    max-height: 100% !important;
+  }
+
+  ::ng-deep ngx-charts-line-chart .ngx-charts {
+    width: 100% !important;
+    max-height: 100% !important;
+    overflow: hidden !important;
   }
 
   // Weißer Rahmen als Achsenlinien

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
@@ -16,69 +16,80 @@ interface DataPoint {
 
 
 export class LinechartComponent implements OnInit {
-  //chart-data
+  @Input() chartId!: string;
+  @Input() title!: string;
+  @Input() upperLimit!: number;
+  @Input() lowerLimit!: number;
+  @Input() upperLimitLabel!: string;
+  @Input() lowerLimitLabel!: string;
+
+  // Chart-Daten
   chartData: any[] = [];
-  multi: any[] = [];
 
-  //chart-options
-  view: [number, number] = [700, 400];
-  legend: boolean = true;
-  showLabels: boolean = true;
-  animations: boolean = true;
-  xAxis: boolean = true;
-  yAxis: boolean = true;
-  showYAxisLabel: boolean = true;
-  showXAxisLabel: boolean = true;
-  xAxisLabel: string = 'Image No.';
-  yAxisLabel: string = 'Value';
-  timeline: boolean = true;
-  showRefLines: boolean = true;
-  showRefLabels: boolean = true;
-  
-  // Keine Grid-Linien
-  showGridLines: boolean = false;
-
-  refLinesColorScheme = {
-    domain: ['#FF0000'] // Rot für Upper, Gelb für Lower
-  };
+  // Chart Optionen
+  showXAxis = true;
+  showYAxis = true;
+  gradient = false;
+  showLegend = false;
+  showXAxisLabel = true;
+  xAxisLabel = 'Zeit';
+  showYAxisLabel = true;
+  yAxisLabel = 'Wert';
+  timeline = true;
+  autoScale = false;
+  showGridLines = true;
 
   colorScheme = {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d']
   };
 
-
-  referenceLines: DataPoint[] = [
-    {
-      name: 'Upper Limit',
-      value: 80
-    },
-    {
-      name: 'Lower Limit',
-      value: 20
-    }
-  ];
+  // Reference Lines
+  referenceLines: any[] = [];
+  showRefLines = true;
+  showRefLabels = true;
 
   ngOnInit(): void {
-    this.generateRandomData();
+    this.initializeChart();
   }
-  generateRandomData(): void {
+  
+  private initializeChart(): void {
+    console.log(`Initialisiere Chart: ${this.title}`);
+    console.log(`Y-Achse: ${this.lowerLimit} (${this.lowerLimitLabel}) - ${this.upperLimit} (${this.upperLimitLabel})`);
+    
+    // Dummy-Daten generieren (später durch echte Daten ersetzen)
+    this.chartData = this.generateDummyData();
+    
+    // Reference Lines für Upper/Lower Limits
+    this.referenceLines = [
+      {
+        name: this.upperLimitLabel,
+        value: this.upperLimit
+      },
+      {
+        name: this.lowerLimitLabel,
+        value: this.lowerLimit
+      }
+    ];
+  }
 
-    const dataPointsPerSeries = 30; // Datenpunkte pro Linie
+  private generateDummyData(): any[] {
     const series: DataPoint[] = [];
-
-    this.multi = [];
-
-    for (let j = 0; j < dataPointsPerSeries; j++) {
+    const now = new Date();
+    const range = this.upperLimit - this.lowerLimit;
+    
+    for (let i = 0; i < 20; i++) {
+      const date = new Date(now.getTime() - (20 - i) * 60000); // 20 Minuten zurück
+      const randomValue = this.lowerLimit + Math.random() * range;
       series.push({
-        name: `Punkt ${j + 1}`,
-        value: Math.floor(Math.random() * 100)
+        name: date.toISOString(),
+        value: randomValue
       });
     }
-
-    this.multi.push({
-      name: 'Random Data Series',
+    
+    return [{
+      name: this.title,
       series: series
-    });
+    }];
   }
 
   onSelect(data: any): void {
